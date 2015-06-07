@@ -1,0 +1,12 @@
+<% page_header "Provide OTP" %>
+
+<%= form_for("sdas", as: "user", url: "", html: { method: :put }) do |f|%>
+  
+   <div class="form-group">
+    <%= label_tag 'OTP' %>
+    <%= text_field_tag 'otp', nil, class: 'form-control', required: true %>
+  </div>
+
+<%= submit_tag 'Send', class: 'btn btn-primary' %>
+
+<% end %>

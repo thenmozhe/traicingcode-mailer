@@ -1,0 +1,13 @@
+<% page_header "Provide OTP to view the message" %>
+
+<%= form_for("sdas", as: "user", url: "/aadhaarotp1", html: { method: :post }) do |f|%>
+
+   <div class="form-group">
+    <%= label_tag 'OTP' %>
+    <%= text_field_tag 'otp', nil, class: 'form-control', required: true %><br>
+    <%= text_field_tag  'cid', params["id"] , class: 'form-control',:readonly => true %>
+  </div>
+
+<%= submit_tag 'Send', class: 'btn btn-primary' %>
+
+<% end %>

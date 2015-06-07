@@ -1,0 +1,896 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-07 13:27:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConversationsController#index as HTML
+Completed 401 Unauthorized in 72ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-07 13:27:47 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 338ms (Views: 304.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:27:48 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-07 13:27:51 +0530
+Processing by ConversationsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-07 13:27:51 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 135ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-07 13:27:58 +0530
+Processing by Users::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 126ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "user"=>{"email"=>"5@5.com", "name"=>"5", "aadhar"=>"12345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = '5@5.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("aadhar", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["aadhar", "12345678"], ["created_at", "2015-06-07 07:58:21.708696"], ["email", "5@5.com"], ["encrypted_password", "$2a$10$eeTIBeAojPU0IbIzMI8VfOqw2INkoRWPGzwA0hMU2IzeeqZQCcJ4e"], ["name", "5"], ["updated_at", "2015-06-07 07:58:21.708696"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 38[0m  [["current_sign_in_at", "2015-06-07 07:58:21.729450"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2015-06-07 07:58:21.729450"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-06-07 07:58:21.730677"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/aadhaarotp
+Completed 302 Found in 202ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users/aadhaarotp" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"aadhaarotp"}
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 38  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 130ms (Views: 129.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:21 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:22 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:22 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:22 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:22 +0530
+
+
+Started PUT "/users/aadhaarotp" for 127.0.0.1 at 2015-06-07 13:28:31 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "otp"=>"12345", "commit"=>"Send", "id"=>"aadhaarotp"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 38  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 38]]
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "users" WHERE "users"."email" = '5@5.com'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 1475ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 38  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:32 +0530
+
+
+Started GET "/users" for 127.0.0.1 at 2015-06-07 13:28:39 +0530
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 182ms (Views: 157.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:28:40 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-07 13:28:43 +0530
+Processing by ConversationsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-07 13:28:43 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 112ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-07 13:28:45 +0530
+Processing by ConversationsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-07 13:28:45 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 140ms (Views: 138.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-07 13:28:48 +0530
+Processing by Users::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 137ms (Views: 135.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+Processing by Users::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 141ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:30:09 +0530
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-06-07 13:36:46 +0530
+Processing by Users::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 168ms (Views: 164.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:36:47 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2015-06-07 13:37:12 +0530
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "user"=>{"email"=>"5@5.com", "name"=>"5", "aadhar"=>"353084238944", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = '5@5.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("aadhar", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["aadhar", "353084238944"], ["created_at", "2015-06-07 08:07:14.794761"], ["email", "5@5.com"], ["encrypted_password", "$2a$10$1xLqIgxbAjXqhVzr3slZG.6Yqgq9YEgUQ37apuhIa/OzgfuWeN1q."], ["name", "5"], ["updated_at", "2015-06-07 08:07:14.794761"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 39[0m  [["current_sign_in_at", "2015-06-07 08:07:14.798694"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2015-06-07 08:07:14.798694"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-06-07 08:07:14.799270"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/aadhaarotp
+Completed 302 Found in 1836ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/users/aadhaarotp" for 127.0.0.1 at 2015-06-07 13:37:14 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"aadhaarotp"}
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 141ms (Views: 139.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:37:15 +0530
+
+
+Started PUT "/users/aadhaarotp" for 127.0.0.1 at 2015-06-07 13:38:51 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "otp"=>"asdsad", "commit"=>"Send", "id"=>"aadhaarotp"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 39]]
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 24731ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-06-07 13:39:17 +0530
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-07 13:39:17 +0530
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMailboxer::Conversation Load (0.2ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0
+  Rendered conversations/_conversation.html.erb (0.0ms)
+  Rendered conversations/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 293ms (Views: 142.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:18 +0530
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2015-06-07 13:39:25 +0530
+Processing by MessagesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered messages/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 124ms (Views: 121.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/chosen-sprite.png" for 127.0.0.1 at 2015-06-07 13:39:33 +0530
+
+
+Started POST "/messages" for 127.0.0.1 at 2015-06-07 13:39:42 +0530
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "message"=>{"subject"=>"dff", "body"=>"sdfsdf", "secured"=>{"secured"=>"1"}}, "recipients"=>["36"], "commit"=>"Send"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."id" IN (36)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "mailboxer_conversations" ("created_at", "subject", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-06-07 08:09:42.636645"], ["subject", "Secured-dff"], ["updated_at", "2015-06-07 08:09:42.636645"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "mailboxer_notifications" ("body", "conversation_id", "created_at", "sender_id", "sender_type", "subject", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "sdfsdf"], ["conversation_id", 46], ["created_at", "2015-06-07 08:09:42.636645"], ["sender_id", 39], ["sender_type", "User"], ["subject", "Secured-dff"], ["type", "Mailboxer::Message"], ["updated_at", "2015-06-07 08:09:42.636645"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "mailboxer_receipts" ("created_at", "mailbox_type", "notification_id", "receiver_id", "receiver_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-06-07 08:09:42.900892"], ["mailbox_type", "inbox"], ["notification_id", 51], ["receiver_id", 36], ["receiver_type", "User"], ["updated_at", "2015-06-07 08:09:42.900892"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "mailboxer_receipts" ("created_at", "is_read", "mailbox_type", "notification_id", "receiver_id", "receiver_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-06-07 08:09:42.906526"], ["is_read", "t"], ["mailbox_type", "sentbox"], ["notification_id", 51], ["receiver_id", 39], ["receiver_type", "User"], ["updated_at", "2015-06-07 08:09:42.906526"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mMailboxer::Message Load (0.2ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications"  WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 51]]
+  [1m[35mMailboxer::Conversation Load (0.1ms)[0m  SELECT  "mailboxer_conversations".* FROM "mailboxer_conversations"  WHERE "mailboxer_conversations"."id" = ? LIMIT 1  [["id", 46]]
+Redirected to http://localhost:3000/conversations/46
+Completed 302 Found in 283ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/conversations/46" for 127.0.0.1 at 2015-06-07 13:39:42 +0530
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMailboxer::Conversation Load (0.2ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["id", 46]]
+Redirected to http://localhost:3000/aadhaar/46
+Completed 302 Found in 1129ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/aadhaar/46" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+Processing by UsersController#aadhaarotp as HTML
+  Parameters: {"id"=>"46"}
+  Rendered users/aadhaarotp.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 252ms (Views: 251.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:39:44 +0530
+
+
+Started POST "/aadhaarotp1" for 127.0.0.1 at 2015-06-07 13:40:18 +0530
+Processing by UsersController#aadhaarotp1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "otp"=>"285975", "cid"=>"46", "commit"=>"Send"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 39]]
+Redirected to http://localhost:3000/conversations
+Completed 302 Found in 1182ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.5ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered conversations/_conversation.html.erb (0.0ms)
+  Rendered conversations/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 140ms (Views: 135.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:40:20 +0530
+
+
+Started GET "/conversations?box=sent" for 127.0.0.1 at 2015-06-07 13:41:13 +0530
+Processing by ConversationsController#index as HTML
+  Parameters: {"box"=>"sent"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.4ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'sentbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."trashed" = 't' AND "mailboxer_receipts"."deleted" = 'f'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."is_read" = 'f'[0m
+  [1m[35mMailboxer::Message Load (1.1ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications"  WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  ORDER BY created_at LIMIT 1  [["conversation_id", 46]]
+  [1m[36mMailboxer::Receipt Load (0.3ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts"  WHERE "mailboxer_receipts"."notification_id" = ?[0m  [["notification_id", 51]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 39]]
+  Rendered conversations/_participants.html.erb (32.8ms)
+  Rendered conversations/_conversation.html.erb (39.2ms)
+  Rendered conversations/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 159ms (Views: 153.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/conversations?box=sent" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+Processing by ConversationsController#index as HTML
+  Parameters: {"box"=>"sent"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.6ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'sentbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."trashed" = 't' AND "mailboxer_receipts"."deleted" = 'f'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."is_read" = 'f'[0m
+  [1m[35mMailboxer::Message Load (0.3ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications"  WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  ORDER BY created_at LIMIT 1  [["conversation_id", 46]]
+  [1m[36mMailboxer::Receipt Load (0.3ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts"  WHERE "mailboxer_receipts"."notification_id" = ?[0m  [["notification_id", 51]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 39]]
+  Rendered conversations/_participants.html.erb (29.9ms)
+  Rendered conversations/_conversation.html.erb (38.7ms)
+  Rendered conversations/index.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 198ms (Views: 164.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:42:25 +0530
+
+
+Started GET "/conversations/46" for 127.0.0.1 at 2015-06-07 13:42:27 +0530
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.3ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["id", 46]]
+Redirected to http://localhost:3000/aadhaar/46
+Completed 302 Found in 1173ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/aadhaar/46" for 127.0.0.1 at 2015-06-07 13:42:28 +0530
+Processing by UsersController#aadhaarotp as HTML
+  Parameters: {"id"=>"46"}
+  Rendered users/aadhaarotp.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 137ms (Views: 136.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/aadhaarotp1" for 127.0.0.1 at 2015-06-07 13:43:43 +0530
+Processing by UsersController#aadhaarotp1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "otp"=>"764178", "cid"=>"46", "commit"=>"Send"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 39]]
+Redirected to http://localhost:3000/conversations/46/true
+Completed 302 Found in 1205ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/conversations/46/true" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"46", "secured"=>"true"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMailboxer::Conversation Load (0.2ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["id", 46]]
+  [1m[36mMailboxer::Message Load (0.3ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications"  WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  ORDER BY created_at LIMIT 1[0m  [["conversation_id", 46]]
+  [1m[35mMailboxer::Receipt Load (0.3ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts"  WHERE "mailboxer_receipts"."notification_id" = ?  [["notification_id", 51]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 36]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 39]]
+  Rendered conversations/_participants.html.erb (36.9ms)
+  [1m[36mMailboxer::Receipt Load (0.2ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User'[0m
+  [1m[35mMailboxer::Message Load (0.2ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications"  WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 51]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 39]]
+  Rendered conversations/show.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 227ms (Views: 193.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:43:45 +0530
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-06-07 13:44:03 +0530
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.3ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered conversations/_conversation.html.erb (0.0ms)
+  Rendered conversations/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 113ms (Views: 110.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/conversations?box=sent" for 127.0.0.1 at 2015-06-07 13:44:05 +0530
+Processing by ConversationsController#index as HTML
+  Parameters: {"box"=>"sent"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.4ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'sentbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."trashed" = 't' AND "mailboxer_receipts"."deleted" = 'f'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 46 AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."is_read" = 'f'[0m
+  [1m[35mMailboxer::Message Load (0.2ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications"  WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  ORDER BY created_at LIMIT 1  [["conversation_id", 46]]
+  [1m[36mMailboxer::Receipt Load (0.1ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts"  WHERE "mailboxer_receipts"."notification_id" = ?[0m  [["notification_id", 51]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 39]]
+  Rendered conversations/_participants.html.erb (5.0ms)
+  Rendered conversations/_conversation.html.erb (10.6ms)
+  Rendered conversations/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 127ms (Views: 123.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/conversations/46" for 127.0.0.1 at 2015-06-07 13:44:06 +0530
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (0.1ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["id", 46]]
+Redirected to http://localhost:3000/aadhaar/46
+Completed 302 Found in 1059ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/aadhaar/46" for 127.0.0.1 at 2015-06-07 13:44:07 +0530
+Processing by UsersController#aadhaarotp as HTML
+  Parameters: {"id"=>"46"}
+  Rendered users/aadhaarotp.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/aadhaarotp1" for 127.0.0.1 at 2015-06-07 13:44:10 +0530
+Processing by UsersController#aadhaarotp1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45+frr1yyB7VYATuzNJSgJeULB8MdDTi/P0JJgfQ7Lk=", "otp"=>"bjbjjh", "cid"=>"46", "commit"=>"Send"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 39]]
+Redirected to http://localhost:3000/conversations
+Completed 302 Found in 1343ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMailboxer::Conversation Load (0.3ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0
+  Rendered conversations/_conversation.html.erb (0.0ms)
+  Rendered conversations/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 13:44:12 +0530
+
+
+Started GET "/conversations" for 127.0.0.1 at 2015-06-07 14:51:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 39  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMailboxer::Conversation Load (16.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = 39 AND "mailboxer_receipts"."receiver_type" = 'User' AND "mailboxer_receipts"."mailbox_type" = 'inbox' AND "mailboxer_receipts"."trashed" = 'f' AND "mailboxer_receipts"."deleted" = 'f'  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered conversations/_conversation.html.erb (0.0ms)
+  Rendered conversations/index.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 534ms (Views: 449.9ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/jquery.image-select.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-07 14:51:16 +0530
